@@ -11,6 +11,7 @@
 	\new Staff \relative c'' { 
 		\compressFullBarRests	
 		\override MultiMeasureRest #'expand-limit = #2
+		\transpose bf c'
 		\clarinetOneNotes
 	}	
 >>
