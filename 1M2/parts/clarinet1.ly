@@ -9,7 +9,7 @@
 
 <<
 	\new Staff \relative c'' { 
-		\compressFullBarRests	
+		\set Score.skipBars = ##t
 		\override MultiMeasureRest #'expand-limit = #2
 		\transpose bf c'
 		\clarinetOneNotes
