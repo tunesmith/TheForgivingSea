@@ -13,7 +13,9 @@ fluteOneNotes = \relative c'' {
 	g4.( fs8) e4 |
 	fs( 
 		<< a2~ {s4 s\> } >> |
-	a4) r\! r |
+	a4) r\! r | 
+	
+	\tag #'part { \break }
 	
 	R4*3
 	r2 fs4\p |
@@ -22,7 +24,10 @@ fluteOneNotes = \relative c'' {
 	<< e2.~ {s2 s4\> } >> | 
 	e4 r\! r |
 	
-	R4*3
+	R4*3 
+	
+	\tag #'part { \break }
+	
 	r2 a,4\mp |
 	e'2( fs4) |
 	g4.( fs8) e4 |
@@ -30,19 +35,27 @@ fluteOneNotes = \relative c'' {
 		<< a2~ {s4 s\> } >> |
 	a4) r\! r |
 	
-	R4*3
+	R4*3 
+	
+	\tag #'part { \break }
+	
 	r2 b8\mf( cs) |
 	d4.( cs8) b4 |
 	cs( a2) |
 	<< b2.~ {s2 s4\> } >> |
 	b4 r\! r |
 	
-	R4*6
+	R4*6 
+	
+	\tag #'part { \break }
+	
 	r2 d8\f( e) |
 	f4.( e8) d4-- |
 	e( c2) |
 	d4.\mf\>( cs?8) b4-- | 
 	cs( fs,?2)\! |
+	
+	\tag #'part { \break }
 	
 	R4*9
 	r4 d'8\mp( cs b a) |

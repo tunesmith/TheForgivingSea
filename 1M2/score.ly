@@ -7,7 +7,7 @@
   short-indent = 1.5\cm  % space for shortInstrumentName
 }
 
-\include "notes/flute-1.ly"
+\include "notes/flute1.ily"
 \include "notes/flute-2.ly"
 \include "notes/oboe1.ily"
 \include "notes/oboe2.ily"
@@ -23,7 +23,7 @@
 			
 			% shortInstrumentName, midiInstrument, etc.
 			% may be set here as well
-			\fluteOneNotes
+			\removeWithTag #'part \fluteOneNotes		
 		}
 		\new Staff = "Staff_flute2" {
 			\set Staff.instrumentName = #"Flute 2"
