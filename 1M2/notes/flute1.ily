@@ -53,11 +53,11 @@ fluteOneNotes = \relative c'' {
 	f4.( e8) d4-- |
 	e( c2) |
 	d4.\mf\>( cs?8) b4-- | 
-	cs( fs,?2)\! |
+	cs( fs,?2) |
 	
 	\tag #'part { \break }
 	
-	R4*9
+	R4*9\!
 	r4 d'8\mp( cs b a) |
 	g2.~ |
 	g2.\> |
