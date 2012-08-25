@@ -30,7 +30,7 @@
 			\set Staff.shortInstrumentName = #"Fl."
 			% shortInstrumentName, midiInstrument, etc.
 			% may be set here as well
-			\fluteTwoNotes
+			\removeWithTag #'part \fluteTwoNotes
 		}
 		\new Staff = "Staff_oboe1" {
 			\set Staff.instrumentName = #"Oboe 1"

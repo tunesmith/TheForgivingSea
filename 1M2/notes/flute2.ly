@@ -15,6 +15,8 @@ fluteTwoNotes = \relative c'' {
 	
 	R2.*7\!
 	
+	\tag #'part { \break }
+	
 	a'2\f a4-- |
 	g(e2) |
 	fs2\mf\> fs4--
