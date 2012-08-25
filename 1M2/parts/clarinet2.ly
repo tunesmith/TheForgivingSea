@@ -9,7 +9,7 @@
 
 <<
 	\new Staff \relative c'' { 
-\set Score.skipBars = ##t
+		\set Score.skipBars = ##t
 		\override MultiMeasureRest #'expand-limit = #2
 		\transpose bf c'
 		\clarinetTwoNotes
