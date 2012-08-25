@@ -1,4 +1,4 @@
-\version "2.15.43"
+\version "2.16.0"
 \include "english.ly"
 
 \layout { ragged-right = ##f }
@@ -13,10 +13,13 @@ bassoonNotes = \relative c {
 	R2.*19 |
 	
 	r4 d\mp\<( e) |
-	fs2\mf\>e4 |
+	\tag #'part { fs?2\mf\>e4 | }
+	\tag #'score { fs2\mf\>e4 | }
 	d2. |
 	
 	R2.*7\! |
+	
+	\tag #'part { \break }
 	
 	f,2.\f |
 	c' |

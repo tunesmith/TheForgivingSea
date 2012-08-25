@@ -59,7 +59,7 @@
 			\set Staff.instrumentName = #"Bassoon"
 			\set Staff.shortInstrumentName = #"Bsn."
 			% midiInstrument may be set here as well
-			\bassoonNotes 
+			\keepWithTag #'score \bassoonNotes 
 		}
 	>>
 >>

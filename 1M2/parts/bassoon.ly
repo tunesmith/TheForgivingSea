@@ -1,16 +1,20 @@
-\version "2.15.43"
+\version "2.16.0"
 \include "english.ly"
+\include "../lib/parts.ily"
+
+\paper {
+	ragged-last-bottom = ##t
+}
 
 \header {
-  instrument = "Bassoon"
+  poet = "Bassoon"
 }
 
 \include "../notes/bassoon.ily"
 
 <<
 	\new Staff \relative c'' { 
-		\set Score.skipBars = ##t
-		\override MultiMeasureRest #'expand-limit = #2
-		\bassoonNotes
+		\everyPartScore
+		\keepWithTag #'part \bassoonNotes
 	}	
 >>
