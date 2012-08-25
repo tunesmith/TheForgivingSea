@@ -5,7 +5,7 @@
   instrument = "Flute 2"
 }
 
-\include "../notes/flute-2.ly"
+\include "../notes/flute2.ly"
 
 <<
 	\new Staff \relative c'' { 

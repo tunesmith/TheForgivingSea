@@ -8,7 +8,7 @@
 }
 
 \include "notes/flute1.ily"
-\include "notes/flute-2.ly"
+\include "notes/flute2.ly"
 \include "notes/oboe1.ily"
 \include "notes/oboe2.ily"
 \include "notes/clarinet1.ily"
