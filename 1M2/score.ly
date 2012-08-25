@@ -39,7 +39,7 @@
 			\set Staff.instrumentName = #"Oboe 2"
 			\set Staff.shortInstrumentName = #"Ob."
 			% midiInstrument may be set here as well
-			\oboeTwoNotes
+			\keepWithTag #'score \oboeTwoNotes
 		}
 		\new Staff = "Staff_clarinet1" {
 			\set Staff.instrumentName = 

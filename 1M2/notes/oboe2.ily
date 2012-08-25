@@ -1,8 +1,30 @@
 \version "2.15.43"
 \include "english.ly"
 
-\layout { ragged-right = ##f }
-
+englishHornNotes = \relative c' {
+	
+	\tag #'part { \bar "||" \key d \major }
+	
+	\tag #'part { r2 a4\p^\markup { \halign #0.4 "English Horn"} | }
+	\tag #'score { r2 a4\p^\markup { \smaller \halign #0.4 "English Horn"} | }
+	
+	\tag #'part { e'2( fs?4) | }
+	\tag #'score { e2( fs4) | }
+	
+	\tag #'part { \break }
+	
+	\tag #'part { g?4.( fs8) e4 | }
+	\tag #'score { g4.( fs8) e4 | }
+	
+	fs( 
+		<< a2~ {s4 s\> } >> |
+	a4) r\! r |
+	
+	R2.*22 
+		
+	\bar "|."	
+	
+}
 oboeTwoNotes = \relative c' {
 
 	\time 3/4
@@ -10,15 +32,9 @@ oboeTwoNotes = \relative c' {
 	\set tieWaitForNote = ##t
 	\textLengthOn	
 	R2.*15 |
-	r2^"English Horn" a4\p |
-		e'2( fs4) |
-	g4.( fs8) e4 |
-	fs( 
-		<< a2~ {s4 s\> } >> |
-	a4) r\! r |
+
+	\tag #'part { \transpose a e' \englishHornNotes }
 	
-	R2.*22 
-		
-	\bar "|."
+	\tag #'score { \englishHornNotes }
 		
 }

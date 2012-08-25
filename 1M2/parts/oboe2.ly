@@ -1,16 +1,23 @@
 \version "2.15.43"
 \include "english.ly"
+\include "../lib/parts.ily"
+
+\paper {
+	ragged-last-bottom = ##t
+}
 
 \header {
-  instrument = "Oboe 2"
+	poet = \markup { 
+		\override #'(baseline-skip . 2.5)
+		\column {"Oboe 2" "(English Horn)" " "}
+	}
 }
 
 \include "../notes/oboe2.ily"
 
 <<
 	\new Staff \relative c'' { 
-		\set Score.skipBars = ##t
-		\override MultiMeasureRest #'expand-limit = #2
-		\oboeTwoNotes
+		\everyPartScore
+		\keepWithTag #'part \oboeTwoNotes
 	}	
 >>
