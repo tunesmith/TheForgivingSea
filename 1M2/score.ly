@@ -20,53 +20,45 @@
 		\new Staff = "Staff_flute1" {
 			\set Staff.instrumentName = #"Flute 1"
 			\set Staff.shortInstrumentName = #"Fl."
-			
-			% shortInstrumentName, midiInstrument, etc.
-			% may be set here as well
+			% midiInstrument may be set here as well
 			\removeWithTag #'part \fluteOneNotes		
 		}
 		\new Staff = "Staff_flute2" {
 			\set Staff.instrumentName = #"Flute 2"
 			\set Staff.shortInstrumentName = #"Fl."
-			% shortInstrumentName, midiInstrument, etc.
-			% may be set here as well
+			% midiInstrument may be set here as well
 			\removeWithTag #'part \fluteTwoNotes
 		}
 		\new Staff = "Staff_oboe1" {
 			\set Staff.instrumentName = #"Oboe 1"
 			\set Staff.shortInstrumentName = #"Ob."
-			% shortInstrumentName, midiInstrument, etc.
-			% may be set here as well
-			\oboeOneNotes
+			% midiInstrument may be set here as well
+			\removeWithTag #'part \oboeOneNotes
 		}
 		\new Staff = "Staff_oboe2" {
 			\set Staff.instrumentName = #"Oboe 2"
 			\set Staff.shortInstrumentName = #"Ob."
-			% shortInstrumentName, midiInstrument, etc.
-			% may be set here as well
+			% midiInstrument may be set here as well
 			\oboeTwoNotes
 		}
 		\new Staff = "Staff_clarinet1" {
 			\set Staff.instrumentName = 
 			\markup { \concat { "Clarinet 1 in B" \flat }}
 			\set Staff.shortInstrumentName = #"Cl."
-			% shortInstrumentName, midiInstrument, etc.
-			% may be set here as well
+			% midiInstrument may be set here as well
 			\clarinetOneNotes
 		}
 		\new Staff = "Staff_clarinet2" {
 			\set Staff.instrumentName = 
 			\markup { \concat { "Clarinet 2 in B" \flat }}
 			\set Staff.shortInstrumentName = #"Cl."
-			% shortInstrumentName, midiInstrument, etc.
-			% may be set here as well
+			% midiInstrument may be set here as well
 			\clarinetTwoNotes
 		}
 		\new Staff = "Staff_bassoon" {
 			\set Staff.instrumentName = #"Bassoon"
 			\set Staff.shortInstrumentName = #"Bsn."
-			% shortInstrumentName, midiInstrument, etc.
-			% may be set here as well
+			% midiInstrument may be set here as well
 			\bassoonNotes 
 		}
 	>>
