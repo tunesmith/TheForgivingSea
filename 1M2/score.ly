@@ -53,7 +53,7 @@
 			\markup { \concat { "Clarinet 2 in B" \flat }}
 			\set Staff.shortInstrumentName = #"Cl."
 			% midiInstrument may be set here as well
-			\clarinetTwoNotes
+			\keepWithTag #'score \clarinetTwoNotes
 		}
 		\new Staff = "Staff_bassoon" {
 			\set Staff.instrumentName = #"Bassoon"
