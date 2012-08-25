@@ -1,17 +1,21 @@
-\version "2.15.43"
+\version "2.16.0"
 \include "english.ly"
+\include "../lib/parts.ily"
+
+\paper {
+	ragged-last-bottom = ##t
+}
 
 \header {
-  instrument = "Clarinet 1"
+  poet = \markup { "Clarinet 1 in B"\flat }
 }
 
 \include "../notes/clarinet1.ily"
 
 <<
 	\new Staff \relative c'' { 
-		\set Score.skipBars = ##t
-		\override MultiMeasureRest #'expand-limit = #2
+		\everyPartScore
 		\transpose bf c'
-		\clarinetOneNotes
+		\keepWithTag #'part \clarinetOneNotes
 	}	
 >>

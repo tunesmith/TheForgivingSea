@@ -1,4 +1,4 @@
-\version "2.15.43"
+\version "2.16.0"
 \include "english.ly"
 
 #(set-global-staff-size 17)
@@ -46,7 +46,7 @@
 			\markup { \concat { "Clarinet 1 in B" \flat }}
 			\set Staff.shortInstrumentName = #"Cl."
 			% midiInstrument may be set here as well
-			\clarinetOneNotes
+			\keepWithTag #'score \clarinetOneNotes
 		}
 		\new Staff = "Staff_clarinet2" {
 			\set Staff.instrumentName = 
