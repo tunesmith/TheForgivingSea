@@ -15,6 +15,8 @@
 \include "notes/clarinet2.ily"
 \include "notes/bassoon.ily"
 
+\include "notes/horn1.ily"
+
 <<
 	\new StaffGroup = "StaffGroup_woodwinds" <<
 		\new Staff = "Staff_flute1" {
@@ -60,6 +62,13 @@
 			\set Staff.shortInstrumentName = #"Bsn."
 			% midiInstrument may be set here as well
 			\keepWithTag #'score \bassoonNotes 
+		}
+	>>
+	\new StaffGroup = "StaffGroup_brass" <<
+		\new Staff = "Staff_horn1" {
+			\set Staff.instrumentName = "Horn 1 in F"
+			\set Staff.shortInstrumentName = "Hn."
+			\keepWithTag #'score \hornOneNotes
 		}
 	>>
 >>
