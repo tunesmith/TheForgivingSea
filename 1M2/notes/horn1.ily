@@ -38,6 +38,7 @@ hornOneNotes = \relative c {
 	d2. ~ |
 	d2 a4\p |
 	d2. ~ |
+	\tag #'score { \override Script #'padding = #1 }
 	<< {d2.\fermata } {s4\> s4 s4\!} >>
 	
 	\bar "|."
