@@ -3,6 +3,7 @@
 
 #(set-global-staff-size 17)
 \paper {
+	#(set-paper-size "legal")
   indent = 3.0\cm  % space for instrumentName
   short-indent = 1.5\cm  % space for shortInstrumentName
 }
