@@ -16,6 +16,7 @@
 \include "notes/bassoon.ily"
 
 \include "notes/horn1.ily"
+\include "notes/horn2.ily"
 
 <<
 	\new StaffGroup = "StaffGroup_woodwinds" <<
@@ -69,6 +70,11 @@
 			\set Staff.instrumentName = "Horn 1 in F"
 			\set Staff.shortInstrumentName = "Hn."
 			\keepWithTag #'score \hornOneNotes
+		}
+		\new Staff = "Staff_horn2" {
+			\set Staff.instrumentName = "Horn 2 in F"
+			\set Staff.shortInstrumentName = "Hn."
+			\keepWithTag #'score \hornTwoNotes
 		}
 	>>
 >>
