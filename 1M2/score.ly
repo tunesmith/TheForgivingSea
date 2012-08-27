@@ -17,6 +17,7 @@
 
 \include "notes/horn1.ily"
 \include "notes/horn2.ily"
+\include "notes/trumpet1.ily"
 
 <<
 	\new StaffGroup = "StaffGroup_woodwinds" <<
@@ -75,6 +76,12 @@
 			\set Staff.instrumentName = "Horn 2 in F"
 			\set Staff.shortInstrumentName = "Hn."
 			\keepWithTag #'score \hornTwoNotes
+		}
+		\new Staff = "Staff_trumpet1" {
+			\set Staff.instrumentName = 
+			\markup { \concat { "Trumpet 1 in B" \flat }}
+			\set Staff.shortInstrumentName = #"Tpt."
+			\keepWithTag #'score \trumpetOneNotes
 		}
 	>>
 >>
