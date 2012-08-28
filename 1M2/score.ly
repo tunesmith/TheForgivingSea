@@ -22,6 +22,7 @@
 \include "notes/trumpet2.ily"
 \include "notes/trombone1.ily"
 \include "notes/trombone2.ily"
+\include "notes/tuba.ily"
 
 <<
 	\new StaffGroup = "StaffGroup_woodwinds" <<
@@ -102,6 +103,11 @@
 			\set Staff.instrumentName = "Trombone 2"
 			\set Staff.shortInstrumentName = #"Tbn."
 			\removeWithTag #'part \tromboneTwoNotes
+		}
+		\new Staff = "Staff_tuba" {
+			\set Staff.instrumentName = "Tuba"
+			\set Staff.shortInstrumentName = #"Tba."
+			\removeWithTag #'part \tubaNotes
 		}
 	>>
 >>

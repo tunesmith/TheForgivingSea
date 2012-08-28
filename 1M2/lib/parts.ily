@@ -8,7 +8,7 @@
 	system-system-spacing #'basic-distance = #16
 	markup-system-spacing #'basic-distance = #18
 	top-markup-spacing #'basic-distance = #6
-	last-bottom-spacing #'basic-distance = #8
+	last-bottom-spacing #'basic-distance = #10
 	left-margin = 20\mm
 	right-margin = 16\mm
 	check-consistency = ##t	
