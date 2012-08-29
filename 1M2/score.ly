@@ -24,6 +24,8 @@
 \include "notes/trombone2.ily"
 \include "notes/tuba.ily"
 
+\include "notes/timpani.ily"
+
 <<
 	\new StaffGroup = "StaffGroup_woodwinds" <<
 		\new Staff = "Staff_flute1" {
@@ -110,4 +112,9 @@
 			\removeWithTag #'part \tubaNotes
 		}
 	>>
+	\new Staff = "Staff_timpani" {
+		\set Staff.instrumentName = "Timpani"
+		\set Staff.shortInstrumentName = "Timp."
+		\timpaniNotes
+	}
 >>
