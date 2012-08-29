@@ -25,6 +25,7 @@
 \include "notes/tuba.ily"
 
 \include "notes/timpani.ily"
+\include "notes/vibraphone.ily"
 
 <<
 	\new StaffGroup = "StaffGroup_woodwinds" <<
@@ -116,5 +117,10 @@
 		\set Staff.instrumentName = "Timpani"
 		\set Staff.shortInstrumentName = "Timp."
 		\timpaniNotes
+	}
+	\new Staff = "Staff_vibraphone" {
+		\set Staff.instrumentName = "Vibraphone"
+		\set Staff.shortInstrumentName = "Vib."
+		\vibraphoneNotes
 	}
 >>
