@@ -7,7 +7,8 @@ fluteOneNotes = \relative c'' {
 	\key d \major
 	\set tieWaitForNote = ##t
 
-	R4*3*3
+	R2.*3
+	
 	r2 a4\p |
 	e'2( fs4) |
 	g4.( fs8) e4 |
@@ -17,14 +18,15 @@ fluteOneNotes = \relative c'' {
 	
 	\tag #'part { \break }
 	
-	R4*3
+	R2.
+	
 	r2 fs4\p |
 	g4.( fs8) e4 |
 	fs2 d4 |
 	<< e2.~ {s2 s4\> } >> | 
 	e4 r\! r |
 	
-	R4*3 
+	R2. 
 	
 	\tag #'part { \break }
 	
@@ -35,7 +37,7 @@ fluteOneNotes = \relative c'' {
 		<< a2~ {s4 s\> } >> |
 	a4) r\! r |
 	
-	R4*3 
+	R2.
 	
 	\tag #'part { \break }
 	
@@ -45,7 +47,7 @@ fluteOneNotes = \relative c'' {
 	<< b2.~ {s2 s4\> } >> |
 	b4 r\! r |
 	
-	R4*6 
+	R2.*2
 	
 	\tag #'part { \break }
 	
@@ -57,7 +59,8 @@ fluteOneNotes = \relative c'' {
 	
 	\tag #'part { \break }
 	
-	R4*9\!
+	R2.*3\!
+	
 	r4 d'8\mp( cs b a) |
 	g2.~ |
 	g2.\> |
