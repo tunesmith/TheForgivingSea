@@ -26,6 +26,8 @@
 
 \include "notes/timpani.ily"
 \include "notes/vibraphone.ily"
+\include "notes/percussion.ily"
+
 
 <<
 	\new StaffGroup = "StaffGroup_woodwinds" <<
@@ -121,6 +123,11 @@
 	\new Staff = "Staff_vibraphone" {
 		\set Staff.instrumentName = "Vibraphone"
 		\set Staff.shortInstrumentName = "Vib."
-		\vibraphoneNotes
+		\removeWithTag #'part \vibraphoneNotes
+	}
+	\new Staff = "Staff_percussion" \with { \accepts "DrumVoice" } {
+		\set Staff.instrumentName = "Percussion"
+		\set Staff.shortInstrumentName = "Perc."
+		\removeWithTag #'part \percussionNotes
 	}
 >>
