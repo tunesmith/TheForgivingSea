@@ -7,7 +7,7 @@
 }
 
 \header {
-	poet = \markup { 
+	instrument = \markup \larger \larger { 
 		\override #'(baseline-skip . 2.5)
 		\column {"Oboe 2" "(English Horn)" " "}
 	}

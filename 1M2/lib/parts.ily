@@ -3,15 +3,47 @@
 
 \paper {
 	#(set-paper-size "letter")
+	top-margin = 14\mm
 	ragged-last-bottom = ##f
 	indent = 1\cm
 	system-system-spacing #'basic-distance = #16
 	markup-system-spacing #'basic-distance = #18
-	top-markup-spacing #'basic-distance = #6
+	top-markup-spacing #'basic-distance = #2
 	last-bottom-spacing #'basic-distance = #10
+	top-system-spacing #'basic-distance = #14
 	left-margin = 20\mm
 	right-margin = 16\mm
 	check-consistency = ##t	
+	bookTitleMarkup = \markup {                                                       
+		\override #'(baseline-skip . 3.5)
+  		\column {
+			\fill-line { \fromproperty #'header:dedication }
+			\override #'(baseline-skip . 3.5)
+    		\column {
+    			\fill-line {
+    				\huge \larger \larger \bold
+    				\fromproperty #'header:title
+    			}
+    			\fill-line {
+    				\large \bold
+    				\fromproperty #'header:subtitle
+    			}
+		    	\fill-line {                                                              
+			        \smaller \bold
+			        \fromproperty #'header:subsubtitle
+		        }
+		        \fill-line {
+		        	\fromproperty #'header:instrument
+		%        	{ \large \bold \fromproperty #'header:poet }
+		        	\fromproperty #'header:composer
+		        }
+		        \fill-line {
+		        	\fromproperty #'header:meter
+		        	\fromproperty #'header:arranger
+		        }
+			}                                                                           
+		}                                                                             
+	} 
 }
 
 \header {

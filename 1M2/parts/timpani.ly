@@ -7,7 +7,7 @@
 }
 
 \header {
-  	poet = \markup \larger \larger "Timpani"
+  	instrument = \markup \larger \larger "Timpani"
 }
 
 \include "../notes/timpani.ily"

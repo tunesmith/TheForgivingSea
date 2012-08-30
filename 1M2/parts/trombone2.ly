@@ -3,7 +3,7 @@
 \include "../lib/parts.ily"
 
 \header {
-  	poet = \markup \larger \larger "Trombone 2"
+  	instrument = \markup \larger \larger "Trombone 2"
 }
 
 \include "../notes/trombone2.ily"

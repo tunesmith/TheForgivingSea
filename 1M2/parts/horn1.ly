@@ -7,7 +7,7 @@
 }
 
 \header {
-	poet = "Horn 1 in F"
+	instrument = \markup \larger \larger "Horn 1 in F"
 }
 
 \include "../notes/horn1.ily"

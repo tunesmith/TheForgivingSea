@@ -7,10 +7,10 @@
 }
 
 \header {
-  	poet = \markup \larger \larger "Flute 2"
+  	instrument = \markup \larger \larger "Flute 2"
 }
 
-\include "../notes/flute2.ly"
+\include "../notes/flute2.ily"
 
 <<
 	\new Staff \relative c'' { 

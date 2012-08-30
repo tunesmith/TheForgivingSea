@@ -7,7 +7,7 @@
 }
 
 \header {
-  poet = "Bassoon"
+	instrument = \markup \larger \larger "Bassoon"
 }
 
 \include "../notes/bassoon.ily"
