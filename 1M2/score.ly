@@ -9,7 +9,7 @@
 }
 
 \include "notes/flute1.ily"
-\include "notes/flute2.ly"
+\include "notes/flute2.ily"
 \include "notes/oboe1.ily"
 \include "notes/oboe2.ily"
 \include "notes/clarinet1.ily"
@@ -27,6 +27,7 @@
 \include "notes/timpani.ily"
 \include "notes/vibraphone.ily"
 \include "notes/percussion.ily"
+\include "notes/harp.ily"
 
 
 <<
@@ -130,4 +131,16 @@
 		\set Staff.shortInstrumentName = "Perc."
 		\removeWithTag #'part \percussionNotes
 	}
+	\new PianoStaff \relative c'' { 
+		\set PianoStaff.instrumentName = "Harp"
+		\set PianoStaff.shortInstrumentName = "Hp."
+		<<
+			\new Staff {
+				\removeWithTag #'part \harpUpNotes
+			}
+			\new Staff {
+				\removeWithTag #'part \harpDownNotes
+		  	}			
+		>>
+	}	
 >>
