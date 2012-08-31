@@ -1,7 +1,7 @@
 \version "2.16.0"
 \include "english.ly"
 
-#(set-global-staff-size 17)
+#(set-global-staff-size 14)
 \paper {
 	#(set-paper-size "legal")
 	indent = 3.0\cm  % space for instrumentName
@@ -30,6 +30,8 @@
 \include "notes/harp.ily"
 \include "notes/piano.ily"
 
+\include "notes/violin1.ily"
+\include "notes/violin2.ily"
 
 <<
 	\new StaffGroup = "StaffGroup_woodwinds" <<
@@ -156,4 +158,17 @@
 		  	}			
 		>>
 	}	
+	\new StaffGroup = "StaffGroup_strings" <<
+		% \new Staff = "Staff_violin1" \with { \consists "Bar_number_engraver" } {
+		\new Staff = "Staff_violin1" {
+			\set Staff.instrumentName = "Violin I"
+			\set Staff.shortInstrumentName = #"Vln. I"
+			\keepWithTag #'score \violinOneNotes
+		}
+		\new Staff = "Staff_violin2" {
+			\set Staff.instrumentName = "Violin II"
+			\set Staff.shortInstrumentName = #"Vln. II"
+			\removeWithTag #'part \violinTwoNotes
+		}
+	>>
 >>
