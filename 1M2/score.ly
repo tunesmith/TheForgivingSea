@@ -28,6 +28,7 @@
 \include "notes/vibraphone.ily"
 \include "notes/percussion.ily"
 \include "notes/harp.ily"
+\include "notes/piano.ily"
 
 
 <<
@@ -140,6 +141,18 @@
 			}
 			\new Staff {
 				\removeWithTag #'part \harpDownNotes
+		  	}			
+		>>
+	}	
+	\new PianoStaff \relative c'' { 
+		\set PianoStaff.instrumentName = "Piano"
+		\set PianoStaff.shortInstrumentName = "Pno."
+		<<
+			\new Staff {
+				\removeWithTag #'part \pianoUpNotes
+			}
+			\new Staff {
+				\removeWithTag #'part \pianoDownNotes
 		  	}			
 		>>
 	}	
