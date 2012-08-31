@@ -1,33 +1,11 @@
 \version "2.16.0"
 \include "english.ly"
 
-\layout { ragged-right = ##f }
+ #(ly:set-option 'relative-includes #t)
+\include "../lib/special-dynamics.ily"
 
-% calculate x-alignment based on attribute text + dynamic text
-% this has to be a markup-command to get stencil-extent based on (interpret-markup layout props ...)
-#(define-markup-command (center-dyn layout props atr-text dyn)(markup? string?)
-  "x-align on center of dynamic"
-  (let* (
-          (text (string-append " " atr-text))
-          (atr-stencil (interpret-markup layout props (markup #:normal-text #:tiny #:italic text)))
-          (dyn-stencil (interpret-markup layout props (markup #:dynamic dyn)))
-          (atr-x-ext (ly:stencil-extent atr-stencil X))
-          (dyn-x-ext (ly:stencil-extent dyn-stencil X))
-          (atr-x (- (cdr atr-x-ext)(car atr-x-ext)))
-          (dyn-x (- (cdr dyn-x-ext)(car dyn-x-ext)))
-          (x-align
-            (* (-
-                 (/ (+ atr-x (/ dyn-x 2)) (+ atr-x dyn-x) )
-                 0.5) -2)
-          )
-        )
-        (interpret-markup layout props (markup #:halign x-align #:concat (#:dynamic dyn #:normal-text #:tiny #:italic text)))
-))
-% define a 'new' attributed dynamic script
-#(define (make-atr-dynamic-script atr dyn)
-        (let ((dynamic (make-dynamic-script (markup #:center-dyn atr dyn))))
-             (ly:music-set-property! dynamic 'tweaks (acons 'X-offset 0 (ly:music-property dynamic 'tweaks)))
-             dynamic))
+
+\layout { ragged-right = ##f }
 
 % define some attributed dynamics
 subp = #(make-atr-dynamic-script "(subito)" "mf")
