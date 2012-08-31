@@ -1,6 +1,8 @@
 \version "2.16.0"
 \include "english.ly"
 
+\include "lib/measure-counter.ily"
+
 #(set-global-staff-size 14)
 \paper {
 	#(set-paper-size "legal")
@@ -8,6 +10,23 @@
 	short-indent = 1.5\cm  % space for shortInstrumentName
 }
 
+\layout {
+  \context {
+    \Global
+    \grobdescriptions #my-grob-descriptions
+    #my-event-classes
+  }
+  \context{
+    \RhythmicStaff
+    \consists \measureCounterEngraver
+
+      \remove "Time_signature_engraver"
+      \remove "Clef_engraver"
+      \override BarLine #'transparent = ##t
+      \override StaffSymbol #'line-count = #0
+  }
+}
+    
 \include "notes/flute1.ily"
 \include "notes/flute2.ily"
 \include "notes/oboe1.ily"
@@ -158,8 +177,14 @@
 		  	}			
 		>>
 	}	
+	\new RhythmicStaff = "MeasureNumbers" {
+			\override Staff.MeasureCounter #'font-encoding = #'fetaText
+		    \override Staff.MeasureCounter #'font-size = #+4
+    		\measureCounterStart	
+    		s2.*42
+    		\measureCounterEnd	
+	}
 	\new StaffGroup = "StaffGroup_strings" <<
-		% \new Staff = "Staff_violin1" \with { \consists "Bar_number_engraver" } {
 		\new Staff = "Staff_violin1" {
 			\set Staff.instrumentName = "Violin I"
 			\set Staff.shortInstrumentName = #"Vln. I"
