@@ -53,7 +53,7 @@
 \include "notes/violin2.ily"
 \include "notes/viola.ily"
 \include "notes/cello.ily"
-
+\include "notes/doublebass.ily"
 
 <<
 	\new StaffGroup = "StaffGroup_woodwinds" <<
@@ -207,6 +207,11 @@
 			\set Staff.instrumentName = "Violoncello"
 			\set Staff.shortInstrumentName = #"Vc."
 			\removeWithTag #'part \celloNotes
+		}
+		\new Staff = "Staff_doublebass" {
+			\set Staff.instrumentName = "Double Bass"
+			\set Staff.shortInstrumentName = #"Db."
+			\removeWithTag #'part \doubleBassNotes
 		}
 	>>
 >>
