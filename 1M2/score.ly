@@ -52,6 +52,7 @@
 \include "notes/violin1.ily"
 \include "notes/violin2.ily"
 \include "notes/viola.ily"
+\include "notes/cello.ily"
 
 
 <<
@@ -201,6 +202,11 @@
 			\set Staff.instrumentName = "Viola"
 			\set Staff.shortInstrumentName = #"Vla."
 			\removeWithTag #'part \violaNotes
+		}
+		\new Staff = "Staff_cello" {
+			\set Staff.instrumentName = "Violoncello"
+			\set Staff.shortInstrumentName = #"Vc."
+			\removeWithTag #'part \celloNotes
 		}
 	>>
 >>
