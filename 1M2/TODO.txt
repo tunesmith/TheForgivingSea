@@ -1,5 +1,3 @@
 Consider aligning last note decrescendos whether or not they have dynamics?
 
-For bar numbers, make a blank staff above Violin and put bar numbers there.
-
 Vibraphone final sustain in score does not extend to fine bar.
