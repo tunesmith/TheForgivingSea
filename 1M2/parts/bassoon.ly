@@ -12,9 +12,7 @@
 
 \include "../notes/bassoon.ily"
 
-<<
-	\new Staff \relative c'' { 
-		\everyPartScore
-		\keepWithTag #'part \bassoonNotes
-	}	
->>
+\relative c'' { 
+	\everyPartScore
+	\keepWithTag #'part \bassoonNotes
+}

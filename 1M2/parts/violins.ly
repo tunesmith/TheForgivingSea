@@ -10,13 +10,13 @@
 \include "../notes/violin1.ily"
 \include "../notes/violin2.ily"
 
-\new StaffGroup \relative c'' { 
+\relative c'' { 
 	<<
-		\new Staff {
+		{
 			\everyPartScore		
 			\keepWithTag #'part \violinOneNotes
 		}
-		\new Staff {
+		{
 	  		\everyPartScore
 			\keepWithTag #'part \violinTwoNotes
 	  	}			

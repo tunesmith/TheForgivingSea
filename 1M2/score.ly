@@ -92,39 +92,33 @@
 		\new Staff = "Staff_flute2" \with { \remove Time_signature_engraver } {
 			\set Staff.instrumentName = #"Flute 2"
 			\set Staff.shortInstrumentName = #"Fl."
-			% midiInstrument may be set here as well
 			\removeWithTag #'part \fluteTwoNotes
 		}
 		\new Staff = "Staff_oboe1" \with { \remove Time_signature_engraver } {
 			\set Staff.instrumentName = #"Oboe 1"
 			\set Staff.shortInstrumentName = #"Ob."
-			% midiInstrument may be set here as well
 			\removeWithTag #'part \oboeOneNotes
 		}
 		\new Staff = "Staff_oboe2" \with { \remove Time_signature_engraver } {
 			\set Staff.instrumentName = #"Oboe 2"
 			\set Staff.shortInstrumentName = #"Ob."
-			% midiInstrument may be set here as well
 			\keepWithTag #'score \oboeTwoNotes
 		}
 		\new Staff = "Staff_clarinet1" \with { \remove Time_signature_engraver } {
 			\set Staff.instrumentName = 
 			\markup { \concat { "Clarinet 1 in B" \flat }}
 			\set Staff.shortInstrumentName = #"Cl."
-			% midiInstrument may be set here as well
 			\keepWithTag #'score \clarinetOneNotes
 		}
 		\new Staff = "Staff_clarinet2" \with { \remove Time_signature_engraver } {
 			\set Staff.instrumentName = 
 			\markup { \concat { "Clarinet 2 in B" \flat }}
 			\set Staff.shortInstrumentName = #"Cl."
-			% midiInstrument may be set here as well
 			\keepWithTag #'score \clarinetTwoNotes
 		}
 		\new Staff = "Staff_bassoon" \with { \remove Time_signature_engraver } {
 			\set Staff.instrumentName = #"Bassoon"
 			\set Staff.shortInstrumentName = #"Bsn."
-			% midiInstrument may be set here as well
 			\keepWithTag #'score \bassoonNotes 
 		}
 	>>

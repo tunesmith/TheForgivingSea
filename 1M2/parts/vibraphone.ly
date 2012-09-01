@@ -8,9 +8,7 @@
 
 \include "../notes/vibraphone.ily"
 
-<<
-	\new Staff \relative c'' { 
-		\everyPartScore
-		\keepWithTag #'part \vibraphoneNotes	
-	}	
->>
+\relative c'' { 
+	\everyPartScore
+	\keepWithTag #'part \vibraphoneNotes	
+}	

@@ -8,9 +8,7 @@
 
 \include "../notes/viola.ily"
 
-<<
-	\new Staff \relative c'' { 
-		\everyPartScore
-		\keepWithTag #'part \violaNotes	
-	}	
->>
+\relative c'' { 
+	\everyPartScore
+	\keepWithTag #'part \violaNotes	
+}	

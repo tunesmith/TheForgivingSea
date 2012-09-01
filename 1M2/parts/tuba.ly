@@ -8,9 +8,7 @@
 
 \include "../notes/tuba.ily"
 
-<<
-	\new Staff \relative c'' { 
-		\everyPartScore
-		\keepWithTag #'part \tubaNotes	
-	}	
->>
+\relative c'' { 
+	\everyPartScore
+	\keepWithTag #'part \tubaNotes	
+}	

@@ -8,9 +8,7 @@
 
 \include "../notes/flute1.ily"
 
-<<
-	\new Staff \relative c'' { 
-		\everyPartScore
-		\keepWithTag #'part \fluteOneNotes	
-	}	
->>
+\relative c'' { 
+	\everyPartScore
+	\keepWithTag #'part \fluteOneNotes	
+}	

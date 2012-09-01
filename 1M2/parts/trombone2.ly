@@ -8,9 +8,7 @@
 
 \include "../notes/trombone2.ily"
 
-<<
-	\new Staff \relative c'' { 
-		\everyPartScore
-		\keepWithTag #'part \tromboneTwoNotes	
-	}	
->>
+\relative c'' { 
+	\everyPartScore
+	\keepWithTag #'part \tromboneTwoNotes	
+}	

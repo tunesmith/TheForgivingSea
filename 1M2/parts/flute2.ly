@@ -12,9 +12,7 @@
 
 \include "../notes/flute2.ily"
 
-<<
-	\new Staff \relative c'' { 
-		\everyPartScore
-		\keepWithTag #'part \fluteTwoNotes 		
-	}	
->>
+\relative c'' { 
+	\everyPartScore
+	\keepWithTag #'part \fluteTwoNotes 		
+}	

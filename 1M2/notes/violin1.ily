@@ -11,17 +11,6 @@ violinOneNotes = \relative c'' {
 	\time 3/4
 	\key d \major
 	\set tieWaitForNote = ##t
-	
-%	\tag #'score { 
-%		\override Staff.BarNumber #'break-visibility = #'#(#f #t #t)
-%		\override Staff.BarNumber #'font-size = #10
-%		\override Staff.BarNumber #'self-alignment-X = #CENTER
-%		\override Staff.BarNumber #'break-align-symbols = #'(staff-bar)
-%		%\override Staff.BarNumber #'direction = #0
-%		%\override Staff.BarNumber #'X-offset = #2
-%		
-%	}
-	
 
 	r2\p a8-- a-- |
 	<< d2. {s2 s4\>}>>
@@ -78,10 +67,6 @@ violinOneNotes = \relative c'' {
 	d~
 	d~
 	<< {d\fermata } {s4\> s4 s4\!} >>
-
-	
-	
-	%\tag #'part { \break }
 	
 	\bar "|."
 		

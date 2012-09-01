@@ -15,9 +15,7 @@
 
 \include "../notes/oboe2.ily"
 
-<<
-	\new Staff \relative c'' { 
-		\everyPartScore
-		\keepWithTag #'part \oboeTwoNotes
-	}	
->>
+\relative c'' { 
+	\everyPartScore
+	\keepWithTag #'part \oboeTwoNotes
+}	

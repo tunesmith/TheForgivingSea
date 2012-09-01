@@ -12,9 +12,7 @@
 
 \include "../notes/timpani.ily"
 
-<<
-	\new Staff \relative c'' { 
-		\everyPartScore
-		\timpaniNotes	
-	}	
->>
+{ 
+	\everyPartScore
+	\timpaniNotes	
+}	

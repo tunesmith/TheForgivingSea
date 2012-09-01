@@ -15,9 +15,7 @@
 
 \include "../notes/percussion.ily"
 
-<<
-	\new Staff \with { \accepts "DrumVoice" } \relative c'' { 
-		\everyPartScore
-		\keepWithTag #'part \percussionNotes
-	}	
->>
+\new Staff \with { \accepts "DrumVoice" } \relative c'' { 
+	\everyPartScore
+	\keepWithTag #'part \percussionNotes
+}	

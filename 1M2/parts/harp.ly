@@ -15,11 +15,11 @@
 
 \new PianoStaff \relative c'' { 
 	<<
-		\new Staff {
+		{
 			\everyPartScore		
 			\keepWithTag #'part \harpUpNotes
 		}
-		\new Staff {
+		{
 	  		\everyPartScore
 			\keepWithTag #'part \harpDownNotes
 	  	}			

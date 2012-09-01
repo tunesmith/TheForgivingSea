@@ -12,10 +12,8 @@
 
 \include "../notes/trumpet2.ily"
 
-<<
-	\new Staff \relative c'' { 
-		\everyPartScore
-		\transpose bf c'
-		\keepWithTag #'part \trumpetTwoNotes
-	}	
->>
+\relative c'' { 
+	\everyPartScore
+	\transpose bf c'
+	\keepWithTag #'part \trumpetTwoNotes
+}	

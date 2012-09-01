@@ -1,3 +1,9 @@
 Consider aligning last note decrescendos whether or not they have dynamics?
 
 Vibraphone final sustain in score does not extend to fine bar.
+
+Consider making measure number font easier to read
+
+Pull arbitrary-bar-number from percussion part into library
+
+Look at "relative" in notes/parts/score to see where its best place is

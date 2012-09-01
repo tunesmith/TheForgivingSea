@@ -8,9 +8,7 @@
 
 \include "../notes/doublebass.ily"
 
-<<
-	\new Staff \relative c'' { 
-		\everyPartScore
-		\keepWithTag #'part \doubleBassNotes	
-	}	
->>
+\relative c'' { 
+	\everyPartScore
+	\keepWithTag #'part \doubleBassNotes	
+}	

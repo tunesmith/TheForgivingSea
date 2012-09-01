@@ -12,10 +12,8 @@
 
 \include "../notes/clarinet2.ily"
 
-<<
-	\new Staff \relative c'' { 
-		\everyPartScore
-		\transpose bf c'
-		\keepWithTag #'part \clarinetTwoNotes
-	}	
->>
+\relative c'' { 
+	\everyPartScore
+	\transpose bf c'
+	\keepWithTag #'part \clarinetTwoNotes
+}	

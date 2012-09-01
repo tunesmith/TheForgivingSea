@@ -22,8 +22,10 @@ Unexpectedly hard parts of creating this score (all specific to v2.16):
 	
 - Header text elements are a bit bearish to configure.  Our instructions were to
 	put the instrument name in the "upper left" of each part; I ended up using
-	the out of the box "poet" slot.  It also could be easier to put a simple
-	newline in, for longer instrument names.
+	the out of the box "poet" slot, and then later reconfigured all of 
+	bookTitleMarkup to reposition "instrument" when it became clear I'd need 
+	the "instrument" slot for later pages.  It also could be easier to put a 
+	simple newline in, for longer instrument names.
 	
 - The alignment of the flat sign in text markup like "Clarinet in Bb" is difficult.
 	I gave up on this one because the approach to make it look right felt too
@@ -63,6 +65,27 @@ Unexpectedly hard parts of creating this score (all specific to v2.16):
 	supported out of the box, but I found a lovely, concise snippet to 
 	help with this at http://lsr.dsi.unimi.it/LSR/Item?id=431
 	
+- Eyeglasses are sometimes used in the bottom right of a page to remind an
+	instrumentalist that there really is another page.  I had to override
+	rehearsal mark in a few ways to get this to work.
+	
+- One interesting semi-bug is that top-markup-spacing doesn't seem to apply
+	to 2nd pages (and later pages) of scores, even if they have the instrument
+	name at the top of the page.  When I got to two-page parts, I had to 
+	rejigger my formatting to use a larger top-margin, introduce 
+	top-system-spacing, and reduce top-markup-spacing.
+
+- It would be nice if, in a PianoStaff, you could invoke "sustainOn" in the
+	upper staff (for instance if you're in a melody-only section) but still
+	easily have the pedal markings show below the lower staff.
+	
+- Figuring out large bar numbers was difficult, and it actually required some
+	alpha code that is included in an issue in the lilypond issue tracker.
+	The mailing list was *great* at pointing this out, thanks Nick!
+	
+- Giant time signatures are actually somewhat common for film scores, but
+	difficult to create in any notation system.  Best option I came up 
+	with was to jack up the font size and assign them to staff groups.
 
 General notes:
 
@@ -71,9 +94,20 @@ General notes:
 	musicians had scrawled in several more accidentals.  (One even praised
 	me with a smiley face for including a certain natural sign.)
 	
-- I chose the approach of inputting all notes in "concert language".  It's apparently
-	a common convention in film scoring to have the full score be a "C Score".
-	This enabled me to just invoke transpose for each of the parts.
+- I chose the approach of inputting all notes in "concert language", except for 
+	double bass.  It's apparently a common convention in film scoring to have 
+	the full score be a "C Score".  This enabled me to just invoke transpose 
+	for each of the parts.
 	
+- In all of the note entry for this score, there was only one serious collision!
+	I had to increase the value of "accidental-collision" for a slur in the 
+	harp part.
 
+- There is a nice snippet at http://lsr.dsi.unimi.it/LSR/Item?id=838 that lets
+	you specify number of bars per page, which is a common requirement for 
+	orchestral scores.
+	
+- I didn't even try to make midi work with this score - that will probably 
+	require a different set of revisions.
+	
 	

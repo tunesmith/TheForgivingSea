@@ -11,11 +11,11 @@
 
 \new PianoStaff \relative c'' { 
 	<<
-		\new Staff {
+		{
 			\everyPartScore		
 			\keepWithTag #'part \pianoUpNotes
 		}
-		\new Staff {
+		{
 	  		\everyPartScore
 			\keepWithTag #'part \pianoDownNotes
 	  	}			

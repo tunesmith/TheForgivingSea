@@ -8,9 +8,8 @@
 
 \include "../notes/oboe1.ily"
 
-<<
-	\new Staff \relative c'' { 
-		\everyPartScore
-		\keepWithTag #'part \oboeOneNotes
-	}	
->>
+
+\relative c'' { 
+	\everyPartScore
+	\keepWithTag #'part \oboeOneNotes
+}	

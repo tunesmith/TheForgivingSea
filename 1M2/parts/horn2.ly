@@ -12,10 +12,9 @@
 
 \include "../notes/horn2.ily"
 
-<<
-	\new Staff \relative c'' { 
-		\everyPartScore
-		\transpose f c'
-		\keepWithTag #'part \hornTwoNotes
-	}	
->>
+
+\relative c'' { 
+	\everyPartScore
+	\transpose f c'
+	\keepWithTag #'part \hornTwoNotes
+}	
