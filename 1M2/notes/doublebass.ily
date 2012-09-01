@@ -62,11 +62,9 @@ doubleBassNotes = \relative c {
 	<< {d2.\fermata } {s4\> s4 s4\!} >>
 		
 	\bar "|."
-	\tag #'part {
-		\override Score.RehearsalMark #'direction = #DOWN
-		\override Score.RehearsalMark #'self-alignment-X = #RIGHT  
-		\override Score.RehearsalMark #'font-size = #0
-		\mark "00:01:06:09"			
-	}
+	\override Score.RehearsalMark #'direction = #DOWN
+	\override Score.RehearsalMark #'self-alignment-X = #RIGHT  
+	\override Score.RehearsalMark #'font-size = #0
+	\mark "00:01:06:09"			
 	
 }

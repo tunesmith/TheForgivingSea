@@ -6,8 +6,12 @@ fluteOneNotes = \relative c'' {
 	\time 3/4
 	\key d \major
 	\set tieWaitForNote = ##t
+	\override Score.RehearsalMark #'self-alignment-X = #LEFT
 
-	R2.*3
+	\tag #'part { R2.*3 }
+	\tag #'score { 
+		R2.*3^\mark \markup { \left-align \tiny "03:37:37:00" }
+	}
 	
 	r2 a4\p |
 	e'2( fs4) |
@@ -23,7 +27,10 @@ fluteOneNotes = \relative c'' {
 	r2 fs4\p |
 	g4.( fs8) e4 |
 	fs2 d4 |
-	<< e2.~ {s2 s4\> } >> | 
+	\tag #'part { << e2.~ {s2 s4\> } >> | }
+	\tag #'score {
+		<< {e2.~^\mark \markup { \left-align \tiny "03:37:55:19" }} {s2 s4\> } >> |		
+	} 
 	e4 r\! r |
 	
 	R2. 
@@ -52,20 +59,28 @@ fluteOneNotes = \relative c'' {
 	\tag #'part { \break }
 	
 	r2 d8\f( e) |
-	f4.( e8) d4-- |
+	\tag #'part { f4.( e8) d4-- | }
+	\tag #'score {
+		f4.(^\mark \markup { \left-align \tiny "03:38:22:02" } e8) d4-- |		
+	}
 	e( c2) |
 	d4.\mf\>( cs?8) b4-- | 
 	cs( fs,?2) |
 	
 	\tag #'part { \break }
 	
-	R2.*3\!
+	\tag #'part { R2.*3\! }
+	\tag #'score { R2.*3\!^\mark \markup { \left-align \tiny "03:38:28:09" }}
 	
 	r4 d'8\mp( cs b a) |
 	g2.~ |
 	g2.\> |
 	
-	R2.*3\! 
+	\tag #'part { R2.*3\! }
+	\tag #'score { 
+		R2.*2\! 
+		R2.^\mark \markup { \left-align \tiny "03:38:40:21" }
+	}
 	\bar "|."
 		
 }

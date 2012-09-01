@@ -2,31 +2,51 @@
 \include "english.ly"
 
 \include "lib/measure-counter.ily"
+\include "lib/bars-per-line.ily"
 
 #(set-global-staff-size 14)
 \paper {
 	#(set-paper-size "legal")
+	top-margin = 14\mm
+	last-bottom-spacing #'basic-distance = #6
+	left-margin = 12\mm
+	right-margin = 14\mm
+	markup-system-spacing #'basic-distance = #12
+
 	indent = 3.0\cm  % space for instrumentName
 	short-indent = 1.5\cm  % space for shortInstrumentName
 }
 
 \layout {
-  \context {
-    \Global
-    \grobdescriptions #my-grob-descriptions
-    #my-event-classes
-  }
-  \context{
-    \RhythmicStaff
-    \consists \measureCounterEngraver
+	\context {
+		\Global
+		\grobdescriptions #my-grob-descriptions
+		#my-event-classes
+	}
+	\context{
+		\RhythmicStaff
+		\consists \measureCounterEngraver
 
-      \remove "Time_signature_engraver"
-      \remove "Clef_engraver"
-      \override BarLine #'transparent = ##t
-      \override StaffSymbol #'line-count = #0
-  }
+		\remove "Time_signature_engraver"
+		\remove "Clef_engraver"
+		\override BarLine #'transparent = ##t
+		\override StaffSymbol #'line-count = #0
+	}
+	\context {
+		\Score
+	    \consists #(bars-per-line-engraver '(4))
+  		\override MetronomeMark #'extra-offset = #'(-1.5 . 0)
+    	\override MetronomeMark #'padding = #'2.5
+	}	
 }
     
+\header {
+	title = \markup \normal-text \larger "The Forgiving Sea 1M2"
+  	composer = \markup "Curt Siffert"
+  	copyright = ""
+  	tagline = ""
+}
+
 \include "notes/flute1.ily"
 \include "notes/flute2.ily"
 \include "notes/oboe1.ily"
@@ -61,7 +81,8 @@
 			\set Staff.instrumentName = #"Flute 1"
 			\set Staff.shortInstrumentName = #"Fl."
 			% midiInstrument may be set here as well
-			\removeWithTag #'part \fluteOneNotes		
+			\tempo 4 = 116
+			\keepWithTag #'score \fluteOneNotes		
 		}
 		\new Staff = "Staff_flute2" {
 			\set Staff.instrumentName = #"Flute 2"
@@ -188,9 +209,10 @@
     		\measureCounterEnd	
 	}
 	\new StaffGroup = "StaffGroup_strings" <<
-		\new Staff = "Staff_violin1" {
+		\new Staff = "Staff_violin1" \with {\consists "Metronome_mark_engraver"} {
 			\set Staff.instrumentName = "Violin I"
-			\set Staff.shortInstrumentName = #"Vln. I"
+			\set Staff.shortInstrumentName = #"Vln. I"	
+			\tempo 4 = 116		
 			\keepWithTag #'score \violinOneNotes
 		}
 		\new Staff = "Staff_violin2" {
