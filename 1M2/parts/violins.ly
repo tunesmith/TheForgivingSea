@@ -2,15 +2,14 @@
 \include "english.ly"
 \include "../lib/parts.ily"
 	
-
 \header {
-  	instrument = \markup \larger \larger "Violins I & II"
+  	instrument = "Violins I & II"
 }
 
 \include "../notes/violin1.ily"
 \include "../notes/violin2.ily"
 
-\relative c'' { 
+\new StaffGroup { 
 	<<
 		{
 			\everyPartScore		

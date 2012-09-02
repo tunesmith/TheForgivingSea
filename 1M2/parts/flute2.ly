@@ -7,12 +7,12 @@
 }
 
 \header {
-  	instrument = \markup \larger \larger "Flute 2"
+  	instrument = "Flute 2"
 }
 
 \include "../notes/flute2.ily"
 
-\relative c'' { 
+{ 
 	\everyPartScore
 	\keepWithTag #'part \fluteTwoNotes 		
 }	

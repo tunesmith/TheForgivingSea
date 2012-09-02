@@ -33,8 +33,7 @@
 			        \fromproperty #'header:subsubtitle
 		        }
 		        \fill-line {
-		        	\fromproperty #'header:instrument
-		%        	{ \large \bold \fromproperty #'header:poet }
+		        	{ \larger \larger \fromproperty #'header:instrument }
 		        	\fromproperty #'header:composer
 		        }
 		        \fill-line {

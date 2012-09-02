@@ -3,12 +3,12 @@
 \include "../lib/parts.ily"
 
 \header {
-  	instrument = \markup \larger \larger "Trombone 2"
+  	instrument = "Trombone 2"
 }
 
 \include "../notes/trombone2.ily"
 
-\relative c'' { 
+{ 
 	\everyPartScore
 	\keepWithTag #'part \tromboneTwoNotes	
 }	

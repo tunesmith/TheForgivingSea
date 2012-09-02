@@ -7,12 +7,12 @@
 }
 
 \header {
-	instrument = \markup \larger \larger "Bassoon"
+	instrument = "Bassoon"
 }
 
 \include "../notes/bassoon.ily"
 
-\relative c'' { 
+{ 
 	\everyPartScore
 	\keepWithTag #'part \bassoonNotes
 }

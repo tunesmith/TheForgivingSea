@@ -7,15 +7,15 @@
 }
 
 \header {
-	instrument = \markup \larger \larger { 
-		\override #'(baseline-skip . 2.5)
+	instrument = \markup { 
+		\override #'(baseline-skip . 2.7)
 		\column {"Oboe 2" "(English Horn)" " "}
 	}
 }
 
 \include "../notes/oboe2.ily"
 
-\relative c'' { 
+{ 
 	\everyPartScore
 	\keepWithTag #'part \oboeTwoNotes
 }	

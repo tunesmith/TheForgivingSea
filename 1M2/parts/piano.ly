@@ -4,12 +4,12 @@
 	
 
 \header {
-  	instrument = \markup \larger \larger "Piano"
+  	instrument = "Piano"
 }
 
 \include "../notes/piano.ily"
 
-\new PianoStaff \relative c'' { 
+\new PianoStaff { 
 	<<
 		{
 			\everyPartScore		

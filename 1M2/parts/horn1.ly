@@ -7,12 +7,12 @@
 }
 
 \header {
-	instrument = \markup \larger \larger "Horn 1 in F"
+	instrument = "Horn 1 in F"
 }
 
 \include "../notes/horn1.ily"
 
-\relative c'' { 
+{ 
 	\everyPartScore
 	\transpose f c'
 	\keepWithTag #'part \hornOneNotes

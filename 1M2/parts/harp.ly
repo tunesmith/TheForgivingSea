@@ -8,12 +8,12 @@
 }	
 
 \header {
-  	instrument = \markup \larger \larger "Harp"
+  	instrument = "Harp"
 }
 
 \include "../notes/harp.ily"
 
-\new PianoStaff \relative c'' { 
+\new PianoStaff { 
 	<<
 		{
 			\everyPartScore		

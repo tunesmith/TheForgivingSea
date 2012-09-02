@@ -7,15 +7,15 @@
 }
 
 \header {
-	instrument = \markup \larger \larger { 
-		\override #'(baseline-skip . 2.5)
+	instrument = \markup { 
+		\override #'(baseline-skip . 2.7)
 		\column {"Glock. /" "Sus. Cymbal" " "}
 	}
 }
 
 \include "../notes/percussion.ily"
 
-\new Staff \with { \accepts "DrumVoice" } \relative c'' { 
+\new Staff \with { \accepts "DrumVoice" } { 
 	\everyPartScore
 	\keepWithTag #'part \percussionNotes
 }	
