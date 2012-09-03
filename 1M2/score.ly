@@ -78,8 +78,9 @@
 <<
 	\new StaffGroup = "StaffGroup_woodwinds" \with {
 		\consists Time_signature_engraver
-		\override TimeSignature #'font-size = #16
-    	\override TimeSignature #'extra-offset = #'(0 . -20)
+		\override TimeSignature #'font-size = #20
+		\override TimeSignature #'font-name = "Futura Condensed"
+    	\override TimeSignature #'extra-offset = #'(0 . -24.5)
 	}
 	<<
 		\new Staff = "Staff_flute1" \with { \remove Time_signature_engraver } {
@@ -212,8 +213,9 @@
 	}
 	\new StaffGroup = "StaffGroup_strings" \with {
 		\consists Time_signature_engraver
-		\override TimeSignature #'font-size = #16
-    	\override TimeSignature #'extra-offset = #'(0 . -231)
+		\override TimeSignature #'font-size = #20
+		\override TimeSignature #'font-name = "Futura Condensed"
+    	\override TimeSignature #'extra-offset = #'(0 . -236)
 	}
 	<<
 		\new Staff = "Staff_violin1" \with {
