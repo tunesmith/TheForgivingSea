@@ -26,7 +26,6 @@
 	\context{
 		\RhythmicStaff
 		\consists \measureCounterEngraver
-
 		\remove "Time_signature_engraver"
 		\remove "Clef_engraver"
 		\override BarLine #'transparent = ##t
@@ -38,6 +37,10 @@
   		\override MetronomeMark #'extra-offset = #'(-1.5 . 0)
     	\override MetronomeMark #'padding = #'2.5
 	}	
+	\context {
+		\Staff
+		\remove Time_signature_engraver
+	}
 }
     
 \header {
@@ -83,98 +86,97 @@
     	\override TimeSignature #'extra-offset = #'(0 . -24.5)
 	}
 	<<
-		\new Staff = "Staff_flute1" \with { \remove Time_signature_engraver } {
+		\new Staff = "Staff_flute1" {
 			\set Staff.instrumentName = #"Flute 1"
 			\set Staff.shortInstrumentName = #"Fl."
 			% midiInstrument may be set here as well
 			\tempo 4 = 116
 			\keepWithTag #'score \fluteOneNotes		
 		}
-		\new Staff = "Staff_flute2" \with { \remove Time_signature_engraver } {
+		\new Staff = "Staff_flute2" {
 			\set Staff.instrumentName = #"Flute 2"
 			\set Staff.shortInstrumentName = #"Fl."
 			\removeWithTag #'part \fluteTwoNotes
 		}
-		\new Staff = "Staff_oboe1" \with { \remove Time_signature_engraver } {
+		\new Staff = "Staff_oboe1" {
 			\set Staff.instrumentName = #"Oboe 1"
 			\set Staff.shortInstrumentName = #"Ob."
 			\removeWithTag #'part \oboeOneNotes
 		}
-		\new Staff = "Staff_oboe2" \with { \remove Time_signature_engraver } {
+		\new Staff = "Staff_oboe2" {
 			\set Staff.instrumentName = #"Oboe 2"
 			\set Staff.shortInstrumentName = #"Ob."
 			\keepWithTag #'score \oboeTwoNotes
 		}
-		\new Staff = "Staff_clarinet1" \with { \remove Time_signature_engraver } {
+		\new Staff = "Staff_clarinet1" {
 			\set Staff.instrumentName = 
 			\markup { \concat { "Clarinet 1 in B" \flat }}
 			\set Staff.shortInstrumentName = #"Cl."
 			\keepWithTag #'score \clarinetOneNotes
 		}
-		\new Staff = "Staff_clarinet2" \with { \remove Time_signature_engraver } {
+		\new Staff = "Staff_clarinet2" {
 			\set Staff.instrumentName = 
 			\markup { \concat { "Clarinet 2 in B" \flat }}
 			\set Staff.shortInstrumentName = #"Cl."
 			\keepWithTag #'score \clarinetTwoNotes
 		}
-		\new Staff = "Staff_bassoon" \with { \remove Time_signature_engraver } {
+		\new Staff = "Staff_bassoon" {
 			\set Staff.instrumentName = #"Bassoon"
 			\set Staff.shortInstrumentName = #"Bsn."
 			\keepWithTag #'score \bassoonNotes 
 		}
 	>>
 	\new StaffGroup = "StaffGroup_brass" <<
-		\new Staff = "Staff_horn1" \with { \remove Time_signature_engraver } {
+		\new Staff = "Staff_horn1" {
 			\set Staff.instrumentName = "Horn 1 in F"
 			\set Staff.shortInstrumentName = "Hn."
 			\keepWithTag #'score \hornOneNotes
 		}
-		\new Staff = "Staff_horn2" \with { \remove Time_signature_engraver } {
+		\new Staff = "Staff_horn2" {
 			\set Staff.instrumentName = "Horn 2 in F"
 			\set Staff.shortInstrumentName = "Hn."
 			\keepWithTag #'score \hornTwoNotes
 		}
-		\new Staff = "Staff_trumpet1" \with { \remove Time_signature_engraver } {
+		\new Staff = "Staff_trumpet1" {
 			\set Staff.instrumentName = 
 			\markup { \concat { "Trumpet 1 in B" \flat }}
 			\set Staff.shortInstrumentName = #"Tpt."
 			\keepWithTag #'score \trumpetOneNotes
 		}
-		\new Staff = "Staff_trumpet2" \with { \remove Time_signature_engraver } {
+		\new Staff = "Staff_trumpet2" {
 			\set Staff.instrumentName = 
 			\markup { \concat { "Trumpet 2 in B" \flat }}
 			\set Staff.shortInstrumentName = #"Tpt."
 			\keepWithTag #'score \trumpetTwoNotes
 		}
-		\new Staff = "Staff_trombone1" \with { \remove Time_signature_engraver } {
+		\new Staff = "Staff_trombone1" {
 			\set Staff.instrumentName = "Trombone 1"
 			\set Staff.shortInstrumentName = #"Tbn."
 			\removeWithTag #'part \tromboneOneNotes
 		}
-		\new Staff = "Staff_trombone2" \with { \remove Time_signature_engraver } {
+		\new Staff = "Staff_trombone2" {
 			\set Staff.instrumentName = "Trombone 2"
 			\set Staff.shortInstrumentName = #"Tbn."
 			\removeWithTag #'part \tromboneTwoNotes
 		}
-		\new Staff = "Staff_tuba" \with { \remove Time_signature_engraver } {
+		\new Staff = "Staff_tuba" {
 			\set Staff.instrumentName = "Tuba"
 			\set Staff.shortInstrumentName = #"Tba."
 			\removeWithTag #'part \tubaNotes
 		}
 	>>
-	\new Staff = "Staff_timpani" \with { \remove Time_signature_engraver } {
+	\new Staff = "Staff_timpani" {
 		\set Staff.instrumentName = "Timpani"
 		\set Staff.shortInstrumentName = "Timp."
 		\timpaniNotes
 	}
-	\new Staff = "Staff_vibraphone" \with { \remove Time_signature_engraver } {
+	\new Staff = "Staff_vibraphone" {
 		\set Staff.instrumentName = "Vibraphone"
 		\set Staff.shortInstrumentName = "Vib."
 		\removeWithTag #'part \vibraphoneNotes
 	}
 	\new Staff = "Staff_percussion" \with { 
 		\accepts "DrumVoice"
-		\remove Time_signature_engraver
 	} {
 		\set Staff.instrumentName = "Percussion"
 		\set Staff.shortInstrumentName = "Perc."
@@ -184,10 +186,10 @@
 		\set PianoStaff.instrumentName = "Harp"
 		\set PianoStaff.shortInstrumentName = "Hp."
 		<<
-			\new Staff \with { \remove Time_signature_engraver } {
+			\new Staff {
 				\removeWithTag #'part \harpUpNotes
 			}
-			\new Staff \with { \remove Time_signature_engraver } {
+			\new Staff {
 				\removeWithTag #'part \harpDownNotes
 		  	}			
 		>>
@@ -196,10 +198,10 @@
 		\set PianoStaff.instrumentName = "Piano"
 		\set PianoStaff.shortInstrumentName = "Pno."
 		<<
-			\new Staff \with { \remove Time_signature_engraver } {
+			\new Staff {
 				\removeWithTag #'part \pianoUpNotes
 			}
-			\new Staff \with { \remove Time_signature_engraver } {
+			\new Staff {
 				\removeWithTag #'part \pianoDownNotes
 		  	}			
 		>>
@@ -220,29 +222,28 @@
 	<<
 		\new Staff = "Staff_violin1" \with {
 			\consists "Metronome_mark_engraver"
-			\remove Time_signature_engraver
 		} {
 			\set Staff.instrumentName = "Violin I"
 			\set Staff.shortInstrumentName = #"Vln. I"	
 			\tempo 4 = 116		
 			\keepWithTag #'score \violinOneNotes
 		}
-		\new Staff = "Staff_violin2" \with { \remove Time_signature_engraver } {
+		\new Staff = "Staff_violin2" {
 			\set Staff.instrumentName = "Violin II"
 			\set Staff.shortInstrumentName = #"Vln. II"
 			\removeWithTag #'part \violinTwoNotes
 		}
-		\new Staff = "Staff_viola" \with { \remove Time_signature_engraver	} {
+		\new Staff = "Staff_viola" {
 			\set Staff.instrumentName = "Viola"
 			\set Staff.shortInstrumentName = #"Vla."
 			\removeWithTag #'part \violaNotes
 		}
-		\new Staff = "Staff_cello" \with { \remove Time_signature_engraver } {
+		\new Staff = "Staff_cello" {
 			\set Staff.instrumentName = "Violoncello"
 			\set Staff.shortInstrumentName = #"Vc."
 			\removeWithTag #'part \celloNotes
 		}
-		\new Staff = "Staff_doublebass" \with { \remove Time_signature_engraver } {
+		\new Staff = "Staff_doublebass" {
 			\set Staff.instrumentName = "Double Bass"
 			\set Staff.shortInstrumentName = #"Db."
 			\removeWithTag #'part \doubleBassNotes
