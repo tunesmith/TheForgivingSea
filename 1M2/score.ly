@@ -12,7 +12,6 @@
 	left-margin = 12\mm
 	right-margin = 14\mm
 	markup-system-spacing #'basic-distance = #12
-
 	indent = 3.0\cm  % space for instrumentName
 	short-indent = 1.5\cm  % space for shortInstrumentName
 }
@@ -175,9 +174,7 @@
 		\set Staff.shortInstrumentName = "Vib."
 		\removeWithTag #'part \vibraphoneNotes
 	}
-	\new Staff = "Staff_percussion" \with { 
-		\accepts "DrumVoice"
-	} {
+	\new Staff = "Staff_percussion" \with { \accepts "DrumVoice" } {
 		\set Staff.instrumentName = "Percussion"
 		\set Staff.shortInstrumentName = "Perc."
 		\removeWithTag #'part \percussionNotes
@@ -220,9 +217,7 @@
     	\override TimeSignature #'extra-offset = #'(0 . -236)
 	}
 	<<
-		\new Staff = "Staff_violin1" \with {
-			\consists "Metronome_mark_engraver"
-		} {
+		\new Staff = "Staff_violin1" \with { \consists "Metronome_mark_engraver" } {
 			\set Staff.instrumentName = "Violin I"
 			\set Staff.shortInstrumentName = #"Vln. I"	
 			\tempo 4 = 116		

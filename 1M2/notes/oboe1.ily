@@ -4,9 +4,6 @@
  #(ly:set-option 'relative-includes #t)
 \include "../lib/special-dynamics.ily"
 
-
-\layout { ragged-right = ##f }
-
 % define some attributed dynamics
 subp = #(make-atr-dynamic-script "(subito)" "mf")
 

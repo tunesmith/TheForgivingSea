@@ -1,8 +1,6 @@
 \version "2.16.0"
 \include "english.ly"
 
-\layout { ragged-right = ##f }
-
 trumpetTwoNotes = \relative c' {
 
 	\time 3/4

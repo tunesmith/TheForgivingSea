@@ -1,8 +1,6 @@
 \version "2.16.0"
 \include "english.ly"
 
-\layout { ragged-right = ##f }
-
 % http://lsr.dsi.unimi.it/LSR/Item?id=431
 num =
 #(define-music-function (parser location musique) (ly:music?)

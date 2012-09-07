@@ -7,3 +7,29 @@ Consider making measure number font easier to read
 Pull arbitrary-bar-number from percussion part into library
 
 Look at "relative" in notes/parts/score to see where its best place is
+
+Rename score.ly to 1M2-Score.ly?
+
+Consider making a "book" that has all the parts put together.
+
+Keep in mind:
+
+Every \layout block affects the \score or \book block in which it 
+appears Ð i.e., a \layout block inside a \score block affects only 
+that \score block, but a \layout block outside of a \score block 
+(and thus in a \book block, either explicitly or implicitly) will 
+affect every \score in that \book.
+
+Remember that \once means it only applies to the *immediately following* 
+note.  Earlier than that, and it gets ignored!!  (Also, \once can be
+used before \set.)
+
+\revert works by just not specifying the final value.
+
+#'string is different than #string, because #'string implies that 
+"string" is a SYMBOL; like a variable name.  However, something like 
+#white also works, because white is a FUNCTION.
+
+Also, it'll simply ignore an override if you specify the wrong context
+for it.  Double check that is't not really a parent context that
+draws it.

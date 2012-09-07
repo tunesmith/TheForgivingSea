@@ -4,6 +4,7 @@
 
 \paper {
 	ragged-last-bottom = ##t
+	ragged-right = ##f
 }
 
 \header {
