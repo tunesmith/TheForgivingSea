@@ -99,6 +99,12 @@ General notes:
 	the full score be a "C Score".  This enabled me to just invoke transpose 
 	for each of the parts.
 	
+- For US paper, a really easy way to create an 11x17" score is to just create 
+	it as an 8x14" score, print it out on a home laser printer (since they 
+	don't usually support 11x17" sizes), and then take it to Kinko's to 
+	enlarge it.  The enlarging works great, and it's much easier than dealing 
+	with tiling and tape.
+	
 - In all of the note entry for this score, there was only one serious collision!
 	I had to increase the value of "accidental-collision" for a slur in the 
 	harp part.
