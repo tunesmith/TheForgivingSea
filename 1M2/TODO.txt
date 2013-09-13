@@ -8,8 +8,6 @@ Pull arbitrary-bar-number from percussion part into library
 
 Look at "relative" in notes/parts/score to see where its best place is
 
-Rename score.ly to 1M2-Score.ly?
-
 Consider making a "book" that has all the parts put together.
 
 Keep in mind:
