@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.18.0"
 \include "english.ly"
 
 harpUpNotes = \relative c' {
@@ -41,9 +41,9 @@ harpUpNotes = \relative c' {
 	<g d' g> |
 
 	\tag #'part {
-		\override Score.RehearsalMark #'direction = #DOWN
-		\override Score.RehearsalMark #'break-visibility = #end-of-line-visible
-		\override Score.RehearsalMark #'self-alignment-X = #RIGHT  
+		\override Score.RehearsalMark.direction = #DOWN
+		\override Score.RehearsalMark.break-visibility = #end-of-line-visible
+		\override Score.RehearsalMark.self-alignment-X = #RIGHT  
 		\mark \markup{ \eyeglasses }			
 	}	
 	\tag #'part { \break }
@@ -86,7 +86,7 @@ harpDownNotes = \relative c, {
 	R2.*4
 	
 	es8\f( c' es2)
-	\once \override Slur #'details #'accidental-collision = #10
+	\once \override Slur.details.accidental-collision = #10
 	
 	c8( g' c2)
 	b,8\mf( fs' b2)

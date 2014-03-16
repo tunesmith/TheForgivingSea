@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.18.0"
 \include "english.ly"
 
 fluteOneNotes = \relative c'' {
@@ -6,7 +6,7 @@ fluteOneNotes = \relative c'' {
 	\time 3/4
 	\key d \major
 	\set tieWaitForNote = ##t
-	\override Score.RehearsalMark #'self-alignment-X = #LEFT
+	\override Score.RehearsalMark.self-alignment-X = #LEFT
 
 	\tag #'part { R2.*3 }
 	\tag #'score { 

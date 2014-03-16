@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.18.0"
 \include "english.ly"
 
 #(ly:set-option 'relative-includes #t)
@@ -34,9 +34,9 @@ violinTwoNotes = \relative c'' {
 	fs2 fs8 fs
 	
 	\tag #'part {
-		\override Score.RehearsalMark #'direction = #DOWN
-		\override Score.RehearsalMark #'break-visibility = #end-of-line-visible
-		\override Score.RehearsalMark #'self-alignment-X = #RIGHT  
+		\override Score.RehearsalMark.direction = #DOWN
+		\override Score.RehearsalMark.break-visibility = #end-of-line-visible
+		\override Score.RehearsalMark.self-alignment-X = #RIGHT  
 		\mark \markup{ \eyeglasses }			
 	}
 	\tag #'part { \break }
@@ -70,9 +70,9 @@ violinTwoNotes = \relative c'' {
 		
 	\bar "|."
 	\tag #'part {
-		\override Score.RehearsalMark #'direction = #DOWN
-		\override Score.RehearsalMark #'self-alignment-X = #RIGHT  
-		\override Score.RehearsalMark #'font-size = #0
+		\override Score.RehearsalMark.direction = #DOWN
+		\override Score.RehearsalMark.self-alignment-X = #RIGHT  
+		\override Score.RehearsalMark.font-size = #0
 		\mark "00:01:06:09"			
 	}
 }

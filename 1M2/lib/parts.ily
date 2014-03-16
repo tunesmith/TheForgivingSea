@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.18.0"
 \include "english.ly"
 
 \paper {
@@ -61,12 +61,12 @@ everyPartScore = {
 \layout{	
 	\context { 
 		\Score
-  		\override MetronomeMark #'extra-offset = #'(-1.5 . 0)
-    	\override MetronomeMark #'padding = #'2.5
-    	\override MetronomeMark #'font-size = \smaller
+  		\override MetronomeMark.extra-offset = #'(-1.5 . 0)
+    	\override MetronomeMark.padding = #'2.5
+    	\override MetronomeMark.font-size = \smaller
 	}
 	\context {
 		\Staff
-		\override MultiMeasureRest #'expand-limit = #1
+		\override MultiMeasureRest.expand-limit = #1
 	}
 }	

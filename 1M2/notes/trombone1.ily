@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.18.0"
 \include "english.ly"
 
 tromboneOneNotes = \relative c {
@@ -52,9 +52,9 @@ tromboneOneNotes = \relative c {
 	
 	\bar "|."
 	\tag #'part {
-		\override Score.RehearsalMark #'direction = #DOWN
-		\override Score.RehearsalMark #'self-alignment-X = #RIGHT  
-		\override Score.RehearsalMark #'font-size = #0
+		\override Score.RehearsalMark.direction = #DOWN
+		\override Score.RehearsalMark.self-alignment-X = #RIGHT  
+		\override Score.RehearsalMark.font-size = #0
 		\mark "00:01:06:09"			
 	}	
 		

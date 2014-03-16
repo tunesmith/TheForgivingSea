@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.18.0"
 \include "english.ly"
 
 hornTwoNotes = \relative c {
@@ -36,14 +36,14 @@ hornTwoNotes = \relative c {
 	a2. ~ |
 	a2 a4\p |
 	a2. ~ |
-	\tag #'score { \override Script #'padding = #1.5 }
+	\tag #'score { \override Script.padding = #1.5 }
 	<< {a2.\fermata } {s4\> s4 s4\!} >>
 	
 	\bar "|."
 	\tag #'part {
-		\override Score.RehearsalMark #'direction = #DOWN
-		\override Score.RehearsalMark #'self-alignment-X = #RIGHT  
-		\override Score.RehearsalMark #'font-size = #0
+		\override Score.RehearsalMark.direction = #DOWN
+		\override Score.RehearsalMark.self-alignment-X = #RIGHT  
+		\override Score.RehearsalMark.font-size = #0
 		\mark "00:01:06:09"			
 	}	
 }

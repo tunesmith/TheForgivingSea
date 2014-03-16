@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.18.0"
 \include "english.ly"
 
 doubleBassNotes = \relative c {
@@ -44,9 +44,9 @@ doubleBassNotes = \relative c {
 	f2.\f
 	c'2.
 	b2.\mf\>
-	\override Hairpin #'to-barline = ##f
+	\override Hairpin.to-barline = ##f
 	a2 fs?4\mp\<
-	\override Hairpin #'to-barline = ##t
+	\override Hairpin.to-barline = ##t
 	g2.\mf\> ~
 	g2.
 	a2.\p ~
@@ -62,9 +62,9 @@ doubleBassNotes = \relative c {
 	<< {d2.\fermata } {s4\> s4 s4\!} >>
 		
 	\bar "|."
-	\override Score.RehearsalMark #'direction = #DOWN
-	\override Score.RehearsalMark #'self-alignment-X = #RIGHT  
-	\override Score.RehearsalMark #'font-size = #0
+	\override Score.RehearsalMark.direction = #DOWN
+	\override Score.RehearsalMark.self-alignment-X = #RIGHT  
+	\override Score.RehearsalMark.font-size = #0
 	\mark "00:01:06:09"			
 	
 }

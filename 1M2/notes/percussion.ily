@@ -1,11 +1,11 @@
-\version "2.16.0"
+\version "2.18.0"
 \include "english.ly"
 
 % http://lsr.dsi.unimi.it/LSR/Item?id=431
 num =
 #(define-music-function (parser location musique) (ly:music?)
-#{ \override Score.BarNumber #'break-visibility = ##(#f #t #t)
-  $musique \revert Score.BarNumber #'break-visibility #})
+#{ \override Score.BarNumber.break-visibility = ##(#f #t #t)
+  $musique \revert Score.BarNumber.break-visibility #})
   
 percussionNotes = \relative c' {
 

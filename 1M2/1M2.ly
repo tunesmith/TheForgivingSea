@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.18.0"
 \include "english.ly"
 
 \include "lib/measure-counter.ily"
@@ -27,14 +27,14 @@
 		\consists \measureCounterEngraver
 		\remove "Time_signature_engraver"
 		\remove "Clef_engraver"
-		\override BarLine #'transparent = ##t
-		\override StaffSymbol #'line-count = #0
+		\override BarLine.transparent = ##t
+		\override StaffSymbol.line-count = #0
 	}
 	\context {
 		\Score
 	    \consists #(bars-per-line-engraver '(4))
-  		\override MetronomeMark #'extra-offset = #'(-1.5 . 0)
-    	\override MetronomeMark #'padding = #'2.5
+  		\override MetronomeMark.extra-offset = #'(-1.5 . 0)
+    	\override MetronomeMark.padding = #'2.5
 	}	
 	\context {
 		\Staff
@@ -80,9 +80,9 @@
 <<
 	\new StaffGroup = "StaffGroup_woodwinds" \with {
 		\consists Time_signature_engraver
-		\override TimeSignature #'font-size = #20
-		\override TimeSignature #'font-name = "Futura Condensed"
-    	\override TimeSignature #'extra-offset = #'(0 . -24.5)
+		\override TimeSignature.font-size = #20
+		\override TimeSignature.font-name = "Futura Condensed"
+    	\override TimeSignature.extra-offset = #'(0 . -24.5)
 	}
 	<<
 		\new Staff = "Staff_flute1" {
@@ -204,17 +204,17 @@
 		>>
 	}	
 	\new RhythmicStaff = "MeasureNumbers" {
-			\override Staff.MeasureCounter #'font-encoding = #'fetaText
-		    \override Staff.MeasureCounter #'font-size = #+4
+			\override Staff.MeasureCounter.font-encoding = #'fetaText
+		    \override Staff.MeasureCounter.font-size = #+4
     		\measureCounterStart	
     		s2.*42
     		\measureCounterEnd	
 	}
 	\new StaffGroup = "StaffGroup_strings" \with {
 		\consists Time_signature_engraver
-		\override TimeSignature #'font-size = #20
-		\override TimeSignature #'font-name = "Futura Condensed"
-    	\override TimeSignature #'extra-offset = #'(0 . -236)
+		\override TimeSignature.font-size = #20
+		\override TimeSignature.font-name = "Futura Condensed"
+    	\override TimeSignature.extra-offset = #'(0 . -236)
 	}
 	<<
 		\new Staff = "Staff_violin1" \with { \consists "Metronome_mark_engraver" } {
