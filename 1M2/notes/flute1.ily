@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.24.0"
 \include "english.ly"
 
 fluteOneNotes = \relative c'' {
@@ -10,7 +10,7 @@ fluteOneNotes = \relative c'' {
 
 	\tag #'part { R2.*3 }
 	\tag #'score { 
-		R2.*3^\mark \markup { \left-align \tiny "03:37:37:00" }
+		R2.*3^\markup { \left-align \tiny "03:37:37:00" }
 	}
 	
 	r2 a4\p |
@@ -29,7 +29,7 @@ fluteOneNotes = \relative c'' {
 	fs2 d4 |
 	\tag #'part { << e2.~ {s2 s4\> } >> | }
 	\tag #'score {
-		<< {e2.~^\mark \markup { \left-align \tiny "03:37:55:19" }} {s2 s4\> } >> |		
+		<< {e2.~^\markup { \left-align \tiny "03:37:55:19" }} {s2 s4\> } >> |		
 	} 
 	e4 r\! r |
 	
@@ -61,7 +61,7 @@ fluteOneNotes = \relative c'' {
 	r2 d8\f( e) |
 	\tag #'part { f4.( e8) d4-- | }
 	\tag #'score {
-		f4.(^\mark \markup { \left-align \tiny "03:38:22:02" } e8) d4-- |		
+		f4.(^\markup { \left-align \tiny "03:38:22:02" } e8) d4-- |		
 	}
 	e( c2) |
 	d4.\mf\>( cs?8) b4-- | 
@@ -70,7 +70,7 @@ fluteOneNotes = \relative c'' {
 	\tag #'part { \break }
 	
 	\tag #'part { R2.*3\! }
-	\tag #'score { R2.*3\!^\mark \markup { \left-align \tiny "03:38:28:09" }}
+	\tag #'score { R2.*3\!^\markup { \left-align \tiny "03:38:28:09" }}
 	
 	r4 d'8\mp( cs b a) |
 	g2.~ |
@@ -79,7 +79,7 @@ fluteOneNotes = \relative c'' {
 	\tag #'part { R2.*3\! }
 	\tag #'score { 
 		R2.*2\! 
-		R2.^\mark \markup { \left-align \tiny "03:38:40:21" }
+		R2.^\markup { \left-align \tiny "03:38:40:21" }
 	}
 	\bar "|."
 		

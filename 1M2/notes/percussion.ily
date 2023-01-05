@@ -1,9 +1,9 @@
-\version "2.18.2"
+\version "2.24.0"
 \include "english.ly"
 
 % http://lsr.dsi.unimi.it/LSR/Item?id=431
 num =
-#(define-music-function (parser location musique) (ly:music?)
+#(define-music-function (musique) (ly:music?)
 #{ \override Score.BarNumber.break-visibility = ##(#f #t #t)
   $musique \revert Score.BarNumber.break-visibility #})
   

@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.24.0"
 \include "english.ly"
 
 \paper {
@@ -6,11 +6,11 @@
 	top-margin = 14\mm
 	ragged-last-bottom = ##f
 	indent = 1\cm
-	system-system-spacing #'basic-distance = #16
-	markup-system-spacing #'basic-distance = #18
-	top-markup-spacing #'basic-distance = #2
-	last-bottom-spacing #'basic-distance = #10
-	top-system-spacing #'basic-distance = #14
+	system-system-spacing.basic-distance = #16
+	markup-system-spacing.basic-distance = #18
+	top-markup-spacing.basic-distance = #2
+	last-bottom-spacing.basic-distance = #10
+	top-system-spacing.basic-distance = #14
 	left-margin = 20\mm
 	right-margin = 16\mm
 	check-consistency = ##t	

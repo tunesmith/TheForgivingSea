@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.24.0"
 \include "english.ly"
 
 doubleBassNotes = \relative c {
@@ -43,6 +43,9 @@ doubleBassNotes = \relative c {
 	
 	f2.\f
 	c'2.
+	
+	\tag #'part { \break }
+	
 	b2.\mf\>
 	\override Hairpin.to-barline = ##f
 	a2 fs?4\mp\<

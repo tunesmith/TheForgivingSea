@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.24.0"
 \include "english.ly"
 
 harpUpNotes = \relative c' {
@@ -9,7 +9,7 @@ harpUpNotes = \relative c' {
 	
 	\textLengthOn
 	
-	d2.\p-\markup { \harp-pedal #"---|-v--"} |
+	d2.\p-\markup { \harp-pedal "---|-v--"} |
 	d'2. |
 	\repeat unfold 2 {
 		d,2. | d'2.
@@ -48,7 +48,7 @@ harpUpNotes = \relative c' {
 	}	
 	\tag #'part { \break }
 	
-	s1*0_\markup { \concat { "E" \sharp "  " \harp-pedal #"---|vv--" }		
+	s1*0_\markup { \concat { "E" \sharp "  " \harp-pedal "---|vv--" }		
 	}
 	R2.*4
 	

@@ -1,17 +1,16 @@
-\version "2.18.2"
+\version "2.24.0"
 \include "english.ly"
 
-\include "lib/measure-counter.ily"
 \include "lib/bars-per-line.ily"
 
 #(set-global-staff-size 14)
 \paper {
 	#(set-paper-size "legal")
 	top-margin = 14\mm
-	last-bottom-spacing #'basic-distance = #6
+	last-bottom-spacing.basic-distance = #6
 	left-margin = 12\mm
 	right-margin = 14\mm
-	markup-system-spacing #'basic-distance = #12
+	markup-system-spacing.basic-distance = #12
 	indent = 3.0\cm  % space for instrumentName
 	short-indent = 1.5\cm  % space for shortInstrumentName
 }
@@ -19,12 +18,10 @@
 \layout {
 	\context {
 		\Global
-		\grobdescriptions #my-grob-descriptions
-		#my-event-classes
 	}
 	\context{
 		\RhythmicStaff
-		\consists \measureCounterEngraver
+		\consists Measure_counter_engraver
 		\remove "Time_signature_engraver"
 		\remove "Clef_engraver"
 		\override BarLine.transparent = ##t
@@ -206,9 +203,9 @@
 	\new RhythmicStaff = "MeasureNumbers" {
 			\override Staff.MeasureCounter.font-encoding = #'fetaText
 		    \override Staff.MeasureCounter.font-size = #+4
-    		\measureCounterStart	
+		    \startMeasureCount
     		s2.*42
-    		\measureCounterEnd	
+    		\stopMeasureCount
 	}
 	\new StaffGroup = "StaffGroup_strings" \with {
 		\consists Time_signature_engraver

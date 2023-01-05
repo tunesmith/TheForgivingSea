@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.24.0"
 \include "english.ly"
 
 #(ly:set-option 'relative-includes #t)
@@ -51,6 +51,9 @@ violinTwoNotes = \relative c'' {
 	cs2.)\mf\<
 	
 	a'2\f a4--
+	
+	\tag #'part { \break }
+
 	g!( e2)
 	
 	fs\> fs4--
@@ -59,6 +62,9 @@ violinTwoNotes = \relative c'' {
 	gs'4.\mf( fs8) e4
 	fs2\> d4
 	e2.\mp~
+		
+	\tag #'part { \break }
+
 	e4 r a,,4\mp~
 	
 	a2 a8 a
