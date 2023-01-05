@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.18.2"
 
 % From https://code.google.com/p/lilypond/issues/detail?id=2445
 

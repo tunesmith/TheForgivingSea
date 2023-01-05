@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.18.2"
 \include "english.ly"
 
 % calculate x-alignment based on attribute text + dynamic text
